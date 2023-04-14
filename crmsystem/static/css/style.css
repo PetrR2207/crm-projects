@@ -102,7 +102,7 @@
     font-size: 18px;
     font-weight: 400;
     color: #fff;
-    background: #7F838E;
+    background: none;
 }
 .sidebar.close .nav-links li a .link_name{
     opacity: 0;
@@ -180,7 +180,7 @@
 .home-section{
     position: relative;
     background: #26272B;
-    height: 100vh;
+    height: 10%;
     left: 260px;
     width: calc(100% - 260px);
     transition: all 0.5s ease;
@@ -197,15 +197,56 @@
     align-items: center;
 }
 .home-section .home-page{
-    padding: 0px 2vh 0px 2vh;
+    padding: 5px 0vh 30px 0%;
     height: 100%;
-    width: 60px
+    width: 100%;
     display: flex;
     align-items: center;
-    color: #7F838E;
     background-color: #4E4E56;
 
 }
+.home-section .home-body1{
+    padding: 5px 0vh 5px 7%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #4E4E56;
+}
+.home-section .home-body2{
+    padding: 5px 0vh 5px 7%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #4E4E56;
+}
+.home-section .home-body3{
+    padding: 5px 0vh 5px 0%;
+    width: 100%;
+    height: 78vh;
+    background:
+    url("../images/intro.jpg") center
+    no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.home-section .home-page .home-page-content .text{
+    color:#7F838E;
+    font-size: 15px;
+    margin: 60px;
+}
+.home-section .home-body1 .home-page-content .text{
+    color:#7F838E;
+    font-size: 15px;
+    margin: 60px;
+}
+.home-section .home-body2 .home-page-content .text{
+    color:#7F838E;
+    font-size: 35px;
+    margin: 55px;
+}
+
 .home-section .home-content .bx-menu,
 .home-section .home-content .text{
     color: #7F838E;
