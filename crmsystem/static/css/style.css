@@ -216,6 +216,7 @@
 }
 .home-section .home-body2{
     padding: 5px 0vh 5px 7%;
+
     height: 100%;
     width: 100%;
     display: flex;
@@ -223,6 +224,19 @@
     background-color: #4E4E56;
 }
 .home-section .home-body3{
+    padding: 5px 0px 0px 25px;
+    line-height: 45px;
+    width: 100%;
+    height: 78vh;
+    background-size: cover;
+    color: #7F838E;
+    background-color: #4E4E56;
+}
+.home-section .home-body3 .hr{
+    padding: 0px 5px 0px 70px;
+    height: 0vh;
+}
+.home-section .home-body4{
     padding: 5px 0vh 5px 0%;
     width: 100%;
     height: 78vh;
@@ -236,6 +250,7 @@
     color:#7F838E;
     font-size: 15px;
     margin: 60px;
+    white-space: nowrap; /* Запрещаем перенос текста*/
 }
 .button {
   /* Сбрасываем дефолтные стили */
@@ -287,7 +302,7 @@
 }
 
 div-home {
-  margin: 24px;
+  margin: 20px;
   text-align: center;
 }
 .home-section .home-body1 .home-page-content .text{
