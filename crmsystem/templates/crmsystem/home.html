@@ -2,7 +2,7 @@
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <title> Drop Down Sidebar Menu | CodingLab </title>
+    <title>CRM для обр.учреждений</title>
     <link rel="stylesheet" href="static/css/style.css">
     <!--Boxicons CDN Link -->
     <link href='static/css/styleicon.css' rel='stylesheet'>
@@ -88,21 +88,21 @@
 
 
      <div class="home-page">
-         <div class="home-page-content">
-            <a href="#"><span class="text">Преподаватель</span></a>
-         </div>
-         <div class="home-page-content">
-            <a href="#"><span class="text">Группа</span></a>
-         </div>
-         <div class="home-page-content">
-            <a href="#"><span class="text">Аудитория</span></a>
-         </div>
-         <div class="home-page-content">
-            <a href="#"><span class="text">Формат группы</span></a>
-         </div>
-         <div class="home-page-content">
-            <a href="#"><span class="text">Тип занятия</span></a>
-         </div>
+         <div-home class="home-page-content">
+             <button class="button"><a class="button grey" href="#"><span class="text">Преподаватель</span></a></button>
+         </div-home>
+         <div-home class="home-page-content">
+            <button class="button"><a class="button grey" href="#"><span class="text">Группа</span></a></button>
+         </div-home>
+         <div-home class="home-page-content">
+            <button class="button"><a class="button grey" href="#"><span class="text">Аудитория</span></a></button>
+         </div-home>
+         <div-home class="home-page-content">
+            <button class="button"><a class="button grey" href="#"><span class="text">Формат группы</span></a></button>
+         </div-home>
+         <div-home class="home-page-content">
+            <button class="button"><a class="button grey" href="#"><span class="text">Тип занятия</span></a></button>
+         </div-home>
     </div>
      <div class="home-body1">
          <div class="home-page-content">
@@ -152,6 +152,42 @@
      </div>
      <div class="home-body3">
      </div>
+
+    <head>
+    <link rel="stylesheet" href="static/css/styleform.css">
+    </head>
+    <button class="open-button" onclick="openForm()">
+        <i class='bx bx-like' ></i></button>
+    <div class="form-popup" id="myForm" >
+    <form action="../action_page.php" class="form-container">
+
+        <button type="button" class="btn cancel" onclick="closeForm()">
+        <i class='bx-line-chart-down' ></i></button>
+
+    <u><p><h1><form> Добавьте название</h1></p></u>
+
+    <label for="email"><i class='bx-library' ></i></label><b>
+        <input type="text" placeholder="ДД.ММ.ГГ ЧЧ:ММ" name="email" required></b>
+    <label for="psw"><i class='bx-left-top-arrow-circle' ></i>
+    <input type="text"  placeholder="Преподаватель" name="psw" required></label>
+    <br>
+     <label for="psw"><i class='bx-left-indent' ></i></label>
+
+    <input type="text" placeholder="Название группы" name="psw" required>
+    <br>
+        <label for="psw"><i class='bx-left-down-arrow-circle' ></i></label>
+    <input type="text" placeholder="Аудитория" name="psw" required>
+    <br>
+        <label for="psw"><i class='bx-left-arrow-circle' ></i></label>
+    <input type="text" placeholder="Формат группы" name="psw" required>
+    <br>
+        <label for="psw"><i class='bx-left-arrow-alt' ></i></label><input type="text" placeholder="Тип занятия" name="psw" required>
+
+
+    <button type="submit" class="btn">Добавить</button>
+    </form>
+    </div>
+
   </section>
   <script>
 
@@ -169,7 +205,18 @@
   sidebarBtn.addEventListener("click", ()=>{
       sidebar.classList.toggle("close");
   });
+
+  function openForm() {
+  document.getElementById("myForm").style.display = "block";
+  }
+
+  function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+  }
   </script>
 
 </body>
 </html>
+
+
+

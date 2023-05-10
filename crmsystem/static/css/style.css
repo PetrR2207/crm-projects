@@ -24,6 +24,7 @@
     width:100%;
     display:flex;
     align-items: center;
+    padding: 10px 0px 0px 0px;
 }
 
 .sidebar .logo-details i {
@@ -235,6 +236,59 @@
     color:#7F838E;
     font-size: 15px;
     margin: 60px;
+}
+.button {
+  /* Сбрасываем дефолтные стили */
+  border: none;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  /* Можно также использовать любые встроенные и кастомные шрифты, например, отсюда  */
+  font-family: Roboto, Verdana, Tahoma, sans;
+  /* Тут можно поэкспериментировать */
+  padding: 2px 2px;
+  border-radius: 100px;
+  background-color: #7F838E;
+}
+.button i {
+  margin-right: 4px;
+}
+.button + .button {
+  margin-left: 6px;
+}
+.button.blue {
+  background: #2196F3;
+}
+.button.grey {
+  background: #4E4E56;
+}
+
+.button:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.button:hover.blue {
+  background: #39a1f4;
+}
+.button:hover.purple {
+  background: #a66bbe;
+}
+.button:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.button:active.blue {
+  background: #0d8aee;
+}
+.button:active.purple {
+  background: #8f4bab;
+}
+
+div-home {
+  margin: 24px;
+  text-align: center;
 }
 .home-section .home-body1 .home-page-content .text{
     color:#7F838E;
