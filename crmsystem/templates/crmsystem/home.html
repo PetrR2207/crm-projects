@@ -16,42 +16,42 @@
     </div>
     <ul class="nav-links">
       <li>
-        <a href="#">
+        <a href="{% url 'home' %}">
           <i class='bx bx-grid-alt'></i>
           <span class="link_name">Расписание</span>
         </a>
         <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">Расписание</a></li>
+            <li><a class="link_name" href="{% url 'home' %}">Расписание</a></li>
         </ul>
     </li>
     <li>
         <div class="iocn-link">
-         <a href="#">
+         <a href="{% url 'contact:contact' %}">
           <i class='bx bx-collection'></i>
           <span class='link_name'>Связь</span>
          </a>
         <i class='bx bxs-chevron-down arrow'></i>
       </div>
       <ul class="sub-menu">
-        <li><a class="link_name" href="#">Связь</a></li>
-        <li><a href="#">Оставить сообщение</a></li>
-        <li><a href="#">Контакты</a></li>
-        <li><a href="#">О нас</a></li>
+        <li><a class="link_name" href="{% url 'contact:contact' %}">Связь</a></li>
+        <li><a href="{% url 'contact:contact' %}">Оставить сообщение</a></li>
+        <li><a href="{% url 'contact:contact' %}">Контакты</a></li>
+        <li><a href="{% url 'contact:contact' %}">О нас</a></li>
       </ul>
     </li>
     <li>
         <div class="iocn-link">
-         <a href="#">
+         <a href="{% url 'analytics:analytics' %}">
           <i class='bx bx-book-alt'></i>
           <span class="link_name">Аналитика</span>
         </a>
         <i class='bx bxs-chevron-down arrow'></i>
       </div>
       <ul class="sub-menu">
-        <li><a class="link_name" href="#">Аналитика</a></li>
-        <li><a href="#">Успеваемость</a></li>
-        <li><a href="#">Посещаемость</a></li>
-        <li><a href="#">Средний балл</a></li>
+        <li><a class="link_name" href="{% url 'analytics:analytics' %}">Аналитика</a></li>
+        <li><a href="{% url 'analytics:analytics' %}">Успеваемость</a></li>
+        <li><a href="{% url 'analytics:analytics' %}">Посещаемость</a></li>
+        <li><a href="{% url 'analytics:analytics' %}">Средний балл</a></li>
       </ul>
     </li>
     <li>
