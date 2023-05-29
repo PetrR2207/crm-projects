@@ -1,82 +1,6 @@
-<!DOCTYPE html>
-<html lang="ru" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <title>CRM для обр.учреждений</title>
-    <link rel="stylesheet" href="static/css/style.css">
-    <!--Boxicons CDN Link -->
-    <link href='static/css/styleicon.css' rel='stylesheet'>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-<body>
-  <div class="sidebar">
-    <div class="logo-details">
-      <i class='bx bx-menu'></i>
-      <span class="logo_name">CRM</span>
-    </div>
-    <ul class="nav-links">
-      <li>
-        <a href="{% url 'home' %}">
-          <i class='bx bx-grid-alt'></i>
-          <span class="link_name">Расписание</span>
-        </a>
-        <ul class="sub-menu blank">
-            <li><a class="link_name" href="{% url 'home' %}">Расписание</a></li>
-        </ul>
-    </li>
-    <li>
-        <div class="iocn-link">
-         <a href="{% url 'contact:contact' %}">
-          <i class='bx bx-collection'></i>
-          <span class='link_name'>Связь</span>
-         </a>
-        <i class='bx bxs-chevron-down arrow'></i>
-      </div>
-      <ul class="sub-menu">
-        <li><a class="link_name" href="{% url 'contact:contact' %}">Связь</a></li>
-        <li><a href="{% url 'contact:contact' %}">Оставить сообщение</a></li>
-        <li><a href="{% url 'contact:contact' %}">Контакты</a></li>
-        <li><a href="{% url 'contact:contact' %}">О нас</a></li>
-      </ul>
-    </li>
-    <li>
-        <div class="iocn-link">
-         <a href="{% url 'analytics:analytics' %}">
-          <i class='bx bx-book-alt'></i>
-          <span class="link_name">Аналитика</span>
-        </a>
-        <i class='bx bxs-chevron-down arrow'></i>
-      </div>
-      <ul class="sub-menu">
-        <li><a class="link_name" href="{% url 'analytics:analytics' %}">Аналитика</a></li>
-        <li><a href="{% url 'analytics:analytics' %}">Успеваемость</a></li>
-        <li><a href="{% url 'analytics:analytics' %}">Посещаемость</a></li>
-        <li><a href="{% url 'analytics:analytics' %}">Средний балл</a></li>
-      </ul>
-    </li>
-    <li>
-        <a href="{% url 'finance:finance' %}">
-        <i class='bx bx-pie-chart-alt-2' ></i>
-        <span class="link_name">Финансы</span>
-        </a>
-        <ul class="sub-menu blank">
-            <li><a class="link_name" href="{% url 'finance:finance' %}">Финансы</a></li>
-        </ul>
-    </li>
-    <li>
-        <a href="{% url 'settings:settings' %}">
-        <i class='bx bx-line-chart' ></i>
-        <span class="link_name">Настройки</span>
-        </a>
-        <ul class="sub-menu blank">
-            <li><a class="link_name" href="{% url 'settings:settings' %}">Настройки</a></li>
-        </ul>
-    </li>
-  </ul>
-  </div>
-
-  <section class="home-section">
-     <div class="home-content">
+{% extends "crmsystem/base.html" %}
+{% block content %}
+    <div class="home-content">
        <span class="text">Расписание</span>
            <ul class="sub-menu-user">
             <a href="#">
@@ -84,8 +8,6 @@
             </a>
            </ul>
      </div>
-
-
 
      <div class="home-page">
          <div-home class="home-page-content">
@@ -164,71 +86,12 @@
          18:00<div class="home-body3 hr"><hr color="#7F838E"></div>
          19:00<div class="home-body3 hr"><hr color="#7F838E"></div>
      </div>
-
-    <head>
-    <link rel="stylesheet" href="static/css/styleform.css">
-    </head>
-    <button class="open-button" onclick="openForm()">
-        <i class='bx bx-like' ></i></button>
-    <div class="form-popup" id="myForm" >
-    <form action="../action_page.php" class="form-container">
-
-        <button type="button" class="btn cancel" onclick="closeForm()">
-        <i class='bx-line-chart-down' ></i></button>
-
-    <u><p><h1><form> Добавьте название</h1></p></u>
-
-    <label for="email"><i class='bx-library' ></i></label><b>
-        <input type="text" placeholder="ДД.ММ.ГГ ЧЧ:ММ" name="email" required></b>
-    <label for="psw"><i class='bx-left-top-arrow-circle' ></i>
-    <input type="text"  placeholder="Преподаватель" name="psw" required></label>
-    <br>
-     <label for="psw"><i class='bx-left-indent' ></i></label>
-
-    <input type="text" placeholder="Название группы" name="psw" required>
-    <br>
-        <label for="psw"><i class='bx-left-down-arrow-circle' ></i></label>
-    <input type="text" placeholder="Аудитория" name="psw" required>
-    <br>
-        <label for="psw"><i class='bx-left-arrow-circle' ></i></label>
-    <input type="text" placeholder="Формат группы" name="psw" required>
-    <br>
-        <label for="psw"><i class='bx-left-arrow-alt' ></i></label><input type="text" placeholder="Тип занятия" name="psw" required>
+{% endblock %}
 
 
-    <button type="submit" class="btn">Добавить</button>
-    </form>
-    </div>
 
-  </section>
-  <script>
 
-  let arrow = document.querySelectorAll(".arrow");
-  for (var i = 0; i < arrow.length; i++) {
-      arrow[i].addEventListener("click", (e)=>{
-     let arrowParent = e.target.parentElement.parentElement;
-     arrowParent.classList.toggle("showMenu");
-      });
-  }
 
-  let sidebar = document.querySelector(".sidebar");
-  let sidebarBtn = document.querySelector(".bx-menu");
-  console.log(sidebarBtn);
-  sidebarBtn.addEventListener("click", ()=>{
-      sidebar.classList.toggle("close");
-  });
-
-  function openForm() {
-  document.getElementById("myForm").style.display = "block";
-  }
-
-  function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-  }
-  </script>
-
-</body>
-</html>
 
 
 

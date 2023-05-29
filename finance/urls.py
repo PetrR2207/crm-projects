@@ -6,5 +6,4 @@ app_name = 'finance'
 
 urlpatterns = [
     path('', views.finance, name = 'finance')
-
 ]
