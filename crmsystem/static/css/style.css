@@ -236,6 +236,10 @@
     padding: 0px 5px 0px 70px;
     height: 0vh;
 }
+.home-section .home-body3 .column{
+    padding-left:20px;
+}
+
 .home-section .home-body4{
     padding: 5px 0vh 5px 0%;
     width: 100%;

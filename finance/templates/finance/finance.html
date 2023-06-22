@@ -16,15 +16,6 @@
          <div-home class="home-page-content">
             <button class="button"><a class="button grey" href="#"><span class="text">Группа</span></a></button>
          </div-home>
-         <div-home class="home-page-content">
-            <button class="button"><a class="button grey" href="#"><span class="text">Аудитория</span></a></button>
-         </div-home>
-         <div-home class="home-page-content">
-            <button class="button"><a class="button grey" href="#"><span class="text">Формат группы</span></a></button>
-         </div-home>
-         <div-home class="home-page-content">
-            <button class="button"><a class="button grey" href="#"><span class="text">Тип занятия</span></a></button>
-         </div-home>
     </div>
      <div class="home-body1">
          <div class="home-page-content">
@@ -73,17 +64,48 @@
          </div>
      </div>
      <div class="home-body3">
-          8:00<div class="home-body3 hr"><hr color="#7F838E"></div>
-         9:00<div class="home-body3 hr"><hr color="#7F838E"></div>
-         10:00<div class="home-body3 hr"><hr color="#7F838E"></div>
-         11:00<div class="home-body3 hr"><hr color="#7F838E"></div>
-         12:00<div class="home-body3 hr"><hr color="#7F838E"></div>
-         13:00<div class="home-body3 hr"><hr color="#7F838E"></div>
-         14:00<div class="home-body3 hr"><hr color="#7F838E"></div>
-         15:00<div class="home-body3 hr"><hr color="#7F838E"></div>
-         16:00<div class="home-body3 hr"><hr color="#7F838E"></div>
-         17:00<div class="home-body3 hr"><hr color="#7F838E"></div>
-         18:00<div class="home-body3 hr"><hr color="#7F838E"></div>
-         19:00<div class="home-body3 hr"><hr color="#7F838E"></div>
+     <head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     </head>
+         <canvas id="myChart"></canvas>
+        <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь'],
+                datasets: [{
+                    label: 'Color Counts',
+                    data: [142000, 180000, 160000, 60000, 70000, 80000, 140000],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
      </div>
 {% endblock %}
